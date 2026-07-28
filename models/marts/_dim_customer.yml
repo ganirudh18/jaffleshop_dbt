@@ -1,0 +1,16 @@
+models:
+  - name: dim_customer
+    description: Customer dimension with one row per customer, including basic profile attributes and order history derived from staged customer and order data.
+    columns:
+      - name: customer_id
+        description: Primary key for the customer.
+      - name: first_name
+        description: Customer's first name from the jaffle shop customer source.
+      - name: last_name
+        description: Customer's last name from the jaffle shop customer source.
+      - name: first_order_date
+        description: Date of the customer's earliest order. Null when the customer has not placed an order.
+      - name: most_recent_order_date
+        description: Date of the customer's latest order. Null when the customer has not placed an order.
+      - name: number_of_orders
+        description: Total number of orders placed by the customer across all available order history.
